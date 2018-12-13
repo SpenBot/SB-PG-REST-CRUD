@@ -1,6 +1,7 @@
-/home/spenser/tbg/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/student/studentService.java
-/home/spenser/tbg/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/student/studentController.java
-/home/spenser/tbg/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/student/studentModel.java
-/home/spenser/tbg/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/student/studentRepository.java
+/home/spenser/tbg/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/student/StudentModel.java
+/home/spenser/tbg/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/student/StudentService.java
+/home/spenser/tbg/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/student/StudentRepository.java
+/home/spenser/tbg/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/config/SwaggerConfig.java
+/home/spenser/tbg/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/student/StudentController.java
 /home/spenser/tbg/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/Application.java
 /home/spenser/tbg/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/common/exception/NotFoundException.java

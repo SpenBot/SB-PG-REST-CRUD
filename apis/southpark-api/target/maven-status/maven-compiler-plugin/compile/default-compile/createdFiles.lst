@@ -1,6 +1,7 @@
-southpark/student/studentRepository.class
 southpark/Application.class
-southpark/student/studentService.class
 southpark/common/exception/NotFoundException.class
-southpark/student/studentController.class
-southpark/student/studentModel.class
+southpark/student/StudentModel.class
+southpark/student/StudentRepository.class
+southpark/student/StudentController.class
+southpark/student/StudentService.class
+southpark/config/SwaggerConfig.class

@@ -11,8 +11,6 @@ CREATE DATABASE southpark_db;
 
 \c southpark_db;
 
-CREATE SCHEMA IF NOT EXISTS southpark_schema;
-
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
 
 
@@ -21,16 +19,17 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
 
 -- Students -----------------
 
-CREATE TABLE southpark_schema.students (
-  student_id uuid NOT NULL PRIMARY KEY unique DEFAULT uuid_generate_v4(),
+CREATE TABLE students (
+  -- student_id uuid NOT NULL PRIMARY KEY unique DEFAULT uuid_generate_v4(),
+  student_id SERIAL PRIMARY KEY,
   first_name VARCHAR (300) NOT NULL,
   last_name VARCHAR (300) NOT NULL,
-  grade INTEGER NOT NULL,
+  grade VARCHAR (300) NOT NULL,
   email VARCHAR (300) NOT NULL UNIQUE
 );
 
 
-INSERT INTO southpark_schema.students (first_name, last_name, grade, email) VALUES
+INSERT INTO students (first_name, last_name, grade, email) VALUES
   ('Eric', 'Cartman', 4, 'eric@mail.com'),
   ('Kenny', 'McCormick', 4, 'kenny@mail.com'),
   ('Kyle', 'Broflovski', 4, 'kyle@mail.com'),
@@ -48,7 +47,7 @@ INSERT INTO southpark_schema.students (first_name, last_name, grade, email) VALU
 
 -- COURSES ----------------------------------
 
-CREATE TABLE southpark_schema.courses (
+CREATE TABLE courses (
   course_id uuid NOT NULL PRIMARY KEY unique DEFAULT uuid_generate_v4(),
   title VARCHAR NOT NULL,
   room VARCHAR NOT NULL,
@@ -57,7 +56,7 @@ CREATE TABLE southpark_schema.courses (
 );
 
 
-INSERT INTO southpark_schema.courses (title, room, course_time) VALUES
+INSERT INTO courses (title, room, course_time) VALUES
 -- INSERT INTO courses (title, room, course_time, teacher_id) VALUES
   ('English', '1A', '8:00'),
   ('Chemistry', '1B', '12:15'),
@@ -72,13 +71,13 @@ INSERT INTO southpark_schema.courses (title, room, course_time) VALUES
 
 -- TEACHERS ----------------------------------
 
-CREATE TABLE southpark_schema.teachers (
+CREATE TABLE teachers (
   teacher_id uuid NOT NULL PRIMARY KEY unique DEFAULT uuid_generate_v4(),
   name VARCHAR NOT NULL,
   email VARCHAR (300) NOT NULL UNIQUE
 );
 
-INSERT INTO southpark_schema.teachers (name, email) VALUES
+INSERT INTO teachers (name, email) VALUES
   ('Mr Garrison', 'garrison@mail.com'),
   ('Mr Hand', 'hand@mail.com'),
   ('Mr Mackey', 'mackey@mail.com');
@@ -87,7 +86,7 @@ INSERT INTO southpark_schema.teachers (name, email) VALUES
 
 -- ENROLLMENTS --------------------------------
 
--- CREATE TABLE southpark_schema.enrollments (
+-- CREATE TABLE enrollments (
 --   enrollment_id uuid NOT NULL PRIMARY KEY unique DEFAULT uuid_generate_v4(),
 --   course_id uuid NOT NULL,
 --   student_id uuid NOT NULL
@@ -95,7 +94,7 @@ INSERT INTO southpark_schema.teachers (name, email) VALUES
 --   -- FOREIGN KEY (student_id) REFERENCES students(student_id)
 -- );
 --
--- INSERT INTO southpark_schema.enrollments (course_id, student_id) VALUES
+-- INSERT INTO enrollments (course_id, student_id) VALUES
 --   (1, 1),
 --   (2, 1),
 --   (3, 1),
@@ -119,7 +118,7 @@ INSERT INTO southpark_schema.teachers (name, email) VALUES
 
 -- Confirm Inserts -----------------------------
 
-SELECT * FROM southpark_schema.students;
+SELECT * FROM students;
 
 
 
