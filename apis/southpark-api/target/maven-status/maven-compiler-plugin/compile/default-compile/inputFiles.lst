@@ -2,6 +2,7 @@
 /home/spen/Dev/projects/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/student/StudentService.java
 /home/spen/Dev/projects/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/common/exception/NotFoundException.java
 /home/spen/Dev/projects/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/Application.java
+/home/spen/Dev/projects/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/service/AwsSesService.java
 /home/spen/Dev/projects/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/student/StudentRepository.java
 /home/spen/Dev/projects/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/config/SwaggerConfig.java
 /home/spen/Dev/projects/SB-PG-REST-CRUD/apis/southpark-api/src/main/java/southpark/student/StudentModel.java
