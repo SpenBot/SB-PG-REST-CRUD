@@ -17,9 +17,14 @@ public class StudentController {
     @Autowired
     StudentService studentService;
 
+    // @GetMapping()
+    // public List<StudentModel> getAllStudents() {
+    //     return studentService.findAll();
+    // }
+
     @GetMapping()
-    public List<StudentModel> getAllStudents() {
-        return studentService.findAll();
+    public String test() {
+        return "hello spen";
     }
 
     @GetMapping("/{id}")
